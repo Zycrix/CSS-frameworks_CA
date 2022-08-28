@@ -10760,6 +10760,45 @@ textarea.form-control-lg {
 }
 .profile-picture {
   max-height: 7vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.post {
+  width: 100%;
+}
+
+.profile-picture-profile {
+  max-height: 20vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.friend-container {
+  width: auto;
+}
+
+.friend-container img {
+  max-height: 6vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    max-width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    max-width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
