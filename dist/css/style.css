@@ -10768,6 +10768,14 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
+.s-icon, .close {
+  color: white;
+}
+
 .profile-picture-profile {
   max-height: 20vh;
   aspect-ratio: 1/1;
@@ -10789,14 +10797,24 @@ textarea.form-control-lg {
     max-width: 90%;
     margin: 0 auto;
   }
+  nav {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1000px) {
   main {
     max-width: 75%;
   }
+  nav {
+    max-width: 75%;
+  }
 }
 @media (min-width: 1200px) {
   main {
+    max-width: 50%;
+  }
+  nav {
     max-width: 50%;
   }
 }
