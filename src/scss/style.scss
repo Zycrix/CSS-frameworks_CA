@@ -5,15 +5,20 @@
   max-height:7vh; 
   aspect-ratio: 1/1;
   object-fit: cover; 
+  cursor: pointer;
 }
 .post{
   width: 100%;
+}
+.post-name{
+  cursor: pointer;
 }
 .hidden{
   display: none;
 }
 .s-icon, .close{
   color:white;
+  cursor: pointer;
 }
 .profile-picture-profile{
   max-height: 20vh;
@@ -28,8 +33,18 @@
   aspect-ratio: 1/1;
   object-fit: cover;
 }
+main{
+  min-height: calc(100vh - 136px)
+}
+.logout{
+  cursor: pointer;
+}
 @media(min-width: 700px){
   main{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .search-field{
     max-width: 90%;
     margin: 0 auto;
   }
@@ -42,12 +57,18 @@
   main{
     max-width:75%;
   }
+  .search-field{
+    max-width: 75%;
+  }
   nav{
     max-width: 75%;
   }
 }
 @media(min-width: 1200px){
   main{
+    max-width: 50%;
+  }
+  .search-field{
     max-width: 50%;
   }
   nav{

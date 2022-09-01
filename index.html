@@ -9,25 +9,28 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-  <header class = "bg-dark">
-    <nav class = "navbar">
-      <div class = "p-2">
+  <header class = "bg-dark d-flex flex-column">
+    <nav class = "navbar w-100">
+      <div class = "p-2 hidden header-profile">
         <img src = "/media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
+      </div>
+      <div class = "p2 header-login">
+        <a href = "login.html" class = "text-light text-decoration-none fs-6">Log in</a>
+      </div>
+      <div> 
+        <a href = "index.html" class = "text-light text-decoration-none fs-4">Home</a>
       </div>
       <div class = "s-icon p-3">
         <span class="material-symbols-outlined">
           search
         </span>
       </div>
-      <div class = "search hidden">
-        <form class = "p-3 align-content-center d-flex">
-          <input type = "text" class = "search ">
-          <span class="material-symbols-outlined close pl-3">
-            close
-            </span>
-        </form>
-      </div>
     </nav>
+    <div class = "search-field w-100 ms-100 hidden">
+      <form class = "p-3 align-content-center justify-content-end d-flex">
+        <input type = "text" class = "search ">
+      </form>
+    </div>
   </header>
   <main>
     <h1 class = "text-center p-3">Socials Feed</h1>
@@ -35,8 +38,9 @@
       <div class = "profile-picture-container p-3">
         <img src = "media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
       </div>
-      <form class = "p-3 w-100">
+      <form class = "p-3 w-100 d-flex flex-column">
         <textarea placeholder = "What's on your mind?" class = "post" width = "200px"></textarea>
+        <button class = "btn btn-primary mt-3">POST</button>
       </form>
     </div>
     <div><hr class = "divider m-1"></div>
@@ -55,8 +59,8 @@
         </div>
       </div>
       <div class = "interactions d-flex">
-        <button class = "comment w-50 btn btn-primary bg-dark rounded-0 border-dark">Comment</button>
-        <button class = "like w-50 btn btn-primary bg-dark rounded-0 border-dark">Like</button>
+        <button class = "comment w-50 btn btn-primary rounded-0 border-dark">Comment</button>
+        <button class = "like w-50 btn btn-primary rounded-0 border-dark">Like</button>
       </div>
     </div>
     <div class = "post-friend my-5">
@@ -74,8 +78,8 @@
         </div>
       </div>
       <div class = "interactions d-flex">
-        <button class = "comment w-50 btn btn-primary bg-dark rounded-0 border-dark">Comment</button>
-        <button class = "like w-50 btn btn-primary bg-dark rounded-0 border-dark">Like</button>
+        <button class = "comment w-50 btn btn-primary rounded-0 border-dark">Comment</button>
+        <button class = "like w-50 btn btn-primary rounded-0 border-dark">Like</button>
       </div>
     </div>
     <div class = "post-friend my-5">
@@ -93,8 +97,8 @@
         </div>
       </div>
       <div class = "interactions d-flex">
-        <button class = "comment w-50 btn btn-primary bg-dark rounded-0 border-dark">Comment</button>
-        <button class = "like w-50 btn btn-primary bg-dark rounded-0 border-dark">Like</button>
+        <button class = "comment w-50 btn btn-primary rounded-0 border-dark">Comment</button>
+        <button class = "like w-50 btn btn-primary rounded-0 border-dark">Like</button>
       </div>
     </div>
     <div class = "post-friend my-5">
@@ -112,8 +116,8 @@
         </div>
       </div>
       <div class = "interactions d-flex">
-        <button class = "comment w-50 btn btn-primary bg-dark rounded-0 border-dark">Comment</button>
-        <button class = "like w-50 btn btn-primary bg-dark rounded-0 border-dark">Like</button>
+        <button class = "comment w-50 btn btn-primary rounded-0 border-dark">Comment</button>
+        <button class = "like w-50 btn btn-primary rounded-0 border-dark">Like</button>
       </div>
     </div>
     <div class = "post-friend my-5">
@@ -131,14 +135,15 @@
         </div>
       </div>
       <div class = "interactions d-flex">
-        <button class = "comment w-50 btn btn-primary bg-dark rounded-0 border-dark">Comment</button>
-        <button class = "like w-50 btn btn-primary bg-dark rounded-0 border-dark">Like</button>
+        <button class = "comment w-50 btn btn-primary rounded-0 border-dark">Comment</button>
+        <button class = "like w-50 btn btn-primary rounded-0 border-dark">Like</button>
       </div>
     </div>
   </main>
-
-
-
+  <footer class = "bg-primary">
+    <p class = "text-light text-center fs-4 p-2 logout">Log out</p>
+    <h4 class = "m-0 p-3 text-light text-center">©Kristoffer Mikkelsen</h4>
+  </footer>
   <script src = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src = "script.js"></script>
 </body>
