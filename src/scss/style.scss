@@ -2,7 +2,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .profile-picture{
-  max-height:7vh; // I could not get the size working using bootstrap, tried with both vh-x, h-x, and mh-x but none of them actually resized the picture or the container
+  height:7vh; // I could not get the size working using bootstrap, tried with both vh-x, h-x, and mh-x but none of them actually resized the picture or the container
+
   aspect-ratio: 1/1;
   object-fit: cover; 
   cursor: pointer;
