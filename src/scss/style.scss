@@ -1,0 +1,74 @@
+@import "variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.profile-picture{
+  max-height:7vh; // I could not get the size working using bootstrap, tried with both vh-x, h-x, and mh-x but none of them actually resized the picture or the container
+  aspect-ratio: 1/1;
+  object-fit: cover; 
+  cursor: pointer;
+}
+.post-name{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
+.s-icon, .close{
+  color:white;
+  cursor: pointer;
+}
+.profile-picture-profile{
+  max-height: 20vh; //Had the same issue with these images as the .profile-picture images 
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.friend-container img{
+  max-height: 6vh; //Had the same issue with these images as the .profile-picture images
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+main{
+  min-height: calc(100vh - 136px) //Just a height fix to force the footer to the bottom of the page on the login screen since the login form don't cover the entire height of the container
+}
+.logout{
+  cursor: pointer;
+}
+
+/*I know bootstrap includes its own media queries but after reading the documentation i really can't see any benefit to using they're media query functions over the standard css ones, except for the fact that the breakpoint widths are already chosen to a default value. because of this i chose to keep this section like this for now. For the next project or if we're going to be working more on this site i will probably include it just to have done it but for now i can't see the value in it.*/
+
+@media(min-width: 700px){  
+  main{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .search-field{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  nav{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media(min-width: 1000px){
+  main{
+    max-width:75%;
+  }
+  .search-field{
+    max-width: 75%;
+  }
+  nav{
+    max-width: 75%;
+  }
+}
+@media(min-width: 1200px){
+  main{
+    max-width: 50%;
+  }
+  .search-field{
+    max-width: 50%;
+  }
+  nav{
+    max-width: 50%;
+  }
+}
