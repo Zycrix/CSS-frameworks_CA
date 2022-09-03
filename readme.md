@@ -7,11 +7,7 @@ This is the repository for the CSS frameworks Course assignment. The goal for th
 The code in this repo is using bootstrap, scss and live-server. Before you run this repo please do:
 
 ```
-npm install bootstrap
-
-npm install -D scss
-
-npm install -D live-server
+npm i
 
 npm run build
 
