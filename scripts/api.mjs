@@ -11,19 +11,27 @@ export default async function apiCall(method, body, url){
     headers:{
       "Content-Type": "application/json",
     },
-  }
+  };
 
-  if(window.location.href !== `${window.location.origin}/register.html`){
-    options.headers += {Authorization: `bearer ${window.localStorage.getItem("key")}`,}
+  if(window.localStorage.getItem("key")){
+    const key = JSON.parse(window.localStorage.getItem("key"));
+
+    options.headers = {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${key}`
+    };
   };
 
   if(body){
     options.body = JSON.stringify(body);
+  };
+  
+  try{
+    const response = await fetch(url, options);
+    const result = await response.json();
+
+    return result;
+  }catch(e){
+    return e;
   }
-  console.log(options);
-
-  const response = await fetch(url, options);
-  const result = await response.json();
-
-  return result;
 }
