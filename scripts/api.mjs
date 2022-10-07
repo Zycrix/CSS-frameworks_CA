@@ -13,8 +13,8 @@ export default async function apiCall(method, body, url){
     },
   };
 
-  if(window.localStorage.getItem("key")){
-    const key = JSON.parse(window.localStorage.getItem("key"));
+  if(window.sessionStorage.getItem("key")){
+    const key = JSON.parse(window.sessionStorage.getItem("key"));
 
     options.headers = {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default async function apiCall(method, body, url){
   if(body){
     options.body = JSON.stringify(body);
   };
-  
+  console.log(options);
   try{
     const response = await fetch(url, options);
     const result = await response.json();

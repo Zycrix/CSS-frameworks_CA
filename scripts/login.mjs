@@ -16,8 +16,8 @@ async function login(){
 
   if(result.accessToken){
     error.innerHTML = "";
-    window.localStorage.setItem("key", JSON.stringify(result.accessToken));
-    window.localStorage.setItem("user", JSON.stringify(result));
+    window.sessionStorage.setItem("key", JSON.stringify(result.accessToken));
+    window.sessionStorage.setItem("user", JSON.stringify(result));
     window.location.href = `${window.location.origin}/index.html`;
   }else{
     console.log(result);
