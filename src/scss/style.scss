@@ -34,8 +34,22 @@ main{
 .logout{
   cursor: pointer;
 }
-
-/*I know bootstrap includes its own media queries but after reading the documentation i really can't see any benefit to using they're media query functions over the standard css ones, except for the fact that the breakpoint widths are already chosen to a default value. because of this i chose to keep this section like this for now. For the next project or if we're going to be working more on this site i will probably include it just to have done it but for now i can't see the value in it.*/
+.confirm-error label, .password-error label, .email-error label{
+  display: flex;
+  justify-content: space-between;
+}
+.confirm-error label::after{
+  content:"Passwords must match";
+  color: red;
+}
+.password-error label::after{
+  content:"Minimum 8 characters";
+  color: red;
+}
+.email-error label::after{
+  content:"Must be a valid Noroff email adress";
+  color: red;
+}
 
 @media(min-width: 700px){  
   main{
