@@ -12,7 +12,7 @@ export default function search(feed){
   form.addEventListener("submit", (e)=>{ //I'd prefer making it a realtime search but that's going to have to wait until after im done with all the required features
     e.preventDefault();
 
-    result = feed.filter((post)=>post.author.name === searchBar.value);
+    result = feed.filter((post)=>post.author.name.toLowerCase() === searchBar.value.toLowerCase());
 
     console.log(result);
 

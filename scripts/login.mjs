@@ -6,6 +6,9 @@ const form = document.querySelector(".login");
 const url = "https://nf-api.onrender.com/api/v1/social/auth/login";
 const error = document.querySelector(".error-div");
 
+sessionStorage.clear()
+localStorage.clear()
+
 async function login(){
   const body = {
     email: email.value,

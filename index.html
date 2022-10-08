@@ -9,25 +9,24 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-  <header class = "bg-dark w-100 m-0 p-0">
-    <nav class = "navbar w-100 container row m-auto">
-      <div class = "p-2 hidden header-profile col">
-        <img src = "/media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
-      </div>
-      <div class = "p2 header-login col">
-        <a href = "login.html" class = "text-light text-decoration-none fs-6">Log in</a>
-      </div>
-      <div class = "col align-content-center"> 
-        <a href = "index.html" class = "text-light justify-content-center text-decoration-none fs-4 justify-self-center w-33">Home</a>
-      </div>
-      <div class = "s-icon col">
-<!--         <span class="material-symbols-outlined">
-          search
-        </span> -->
-        <div class = "search-field w-100 ms-100">
-          <form class = "p-3 align-content-center justify-content-center d-flex search-form">
-            <input type = "text" class = "search ">
-          </form>
+  <header class = "bg-dark w-100 m-auto text-center">
+    <nav class = "navbar w-30 m-auto container">
+      <div class = "row w-100 align-items-center">
+        <div class = "p-2 hidden header-profile col w-auto justify-self-center">
+          <img src = "/media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
+        </div>
+        <div class = "p2 header-login col">
+          <a href = "login.html" class = "text-light text-decoration-none fs-6">Log in</a>
+        </div>
+        <div class = "col justify-content-center w-auto"> 
+          <a href = "index.html" class = "text-light text-center justify-self-center text-decoration-none fs-4 justify-self-center w-33">Home</a>
+        </div>
+        <div class = "s-icon col w-auto">
+          <div class = "search-field w-100 ms-100">
+            <form class = "p-3 align-content-center justify-content-center d-flex search-form">
+              <input type = "text" class = "search ">
+            </form>
+          </div>
         </div>
       </div>
     </nav>
@@ -44,6 +43,16 @@
       </form>
     </div>
     <div><hr class = "divider m-1"></div>
+    <div class = "filter d-flex justify-content-between">
+      <p>Filter:</p>
+      <form>
+        <select>
+          <option value = "new">Newest</option>
+          <option value = "old">Oldest</option>
+          <option value = "pop">Most popular</option>
+        </select>
+      </form>
+    </div>
     <div class = "feed-container">
       
     </div>

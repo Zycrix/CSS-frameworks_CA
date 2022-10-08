@@ -1,6 +1,7 @@
 import getPosts from "./getPosts.mjs";
 import search from "./search.mjs";
 import createFeed from "./createFeed.mjs";
+import filter from "./filter.mjs";
 
 //Get posts to feed
 const feed = await getPosts();
@@ -17,9 +18,6 @@ const profileName = document.querySelector(".post-name");
 const logout = document.querySelector(".logout");
 
 //Adding some event listeners
-searchIcon.addEventListener("click", (e)=>{   //Toggle search bar
-  searchBar.classList.toggle("hidden");
-});
 
 profileName.addEventListener("click", (e)=>{
   window.location.href = `${window.origin}/profile.html`
@@ -36,6 +34,8 @@ logout.addEventListener("click", (e)=>{
   window.location.reload();
 });
 
-
+//Search function
 const newFeed = search(feed);
-console.log(newFeed)
+
+//Filter function
+filter();
