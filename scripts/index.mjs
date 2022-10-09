@@ -1,10 +1,17 @@
 import getPosts from "./getPosts.mjs";
-import search from "./search.mjs";
-import createFeed from "./createFeed.mjs";
-import filter from "./filter.mjs";
+
+import newPost from "./newPost.mjs";
+
+const feedContainer = document.querySelector(".feed-container");
 
 //Get posts to feed
 const feed = await getPosts();
+
+const defaultImage = "/media/default-profile.jpg";
+
+for(let i = 0; i < 20; i++){
+  let image = feed[i].author.avatar;
+
 
 createFeed(feed);
 
@@ -39,3 +46,4 @@ const newFeed = search(feed);
 
 //Filter function
 filter();
+
