@@ -10,7 +10,7 @@ export default function createFeed(feed){
 
   for(let i = 0; i < 20; i++){
     let image = defaultImage;
-    const time = feed[i].created.slice(11,19) + " " + feed[i].created.slice(0,10);
+    const time = feed[i].created.slice(11,19) + ", " + feed[i].created.slice(0,10);
 
     if(feed[i].author.avatar.length > 1){image = feed[i].author.avatar};
     
