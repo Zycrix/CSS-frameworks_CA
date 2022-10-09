@@ -25,7 +25,6 @@ export default async function apiCall(method, body, url){
   if(body){
     options.body = JSON.stringify(body);
   };
-  console.log(options);
   try{
     const response = await fetch(url, options);
     const result = await response.json();

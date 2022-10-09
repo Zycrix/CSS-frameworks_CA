@@ -1,10 +1,11 @@
 import getPosts from "./getPosts.mjs";
+import newPost from "./newPost.mjs";
 
 const feedContainer = document.querySelector(".feed-container");
 
 //Get posts to feed
 const feed = await getPosts();
-console.log(feed)
+
 const defaultImage = "/media/default-profile.jpg";
 
 for(let i = 0; i < 20; i++){
@@ -64,3 +65,5 @@ logout.addEventListener("click", (e)=>{
   window.sessionStorage.clear();
   window.location.reload();
 });
+
+newPost();
