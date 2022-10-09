@@ -1,4 +1,4 @@
-import apiCall from "./api.mjs";
+import apiCall from "./modules/api.mjs";
 export default async function newPost(){
   const form = document.querySelector(".new-post");
   const content = document.querySelector(".post");

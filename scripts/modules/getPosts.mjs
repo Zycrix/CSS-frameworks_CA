@@ -1,4 +1,4 @@
-import apiCall from "./api.mjs";
+import apiCall from "./modules/api.mjs";
 /**
  * This function fetches the feed from the api with all the query parameters enabled and stores the result to sessionStorage for later use and returns the result.
  * @returns {array} Returns the array with posts fetched from the api

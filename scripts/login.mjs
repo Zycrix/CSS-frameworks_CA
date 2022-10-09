@@ -1,4 +1,4 @@
-import apiCall from "./api.mjs";
+import apiCall from "./modules/api.mjs";
 
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");

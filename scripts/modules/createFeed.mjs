@@ -18,11 +18,11 @@ export default function createFeed(feed){
     <div class = "post-friend my-5">
       <div class = "d-flex">
         <div class = "profile-picture-container p-3">
-          <img src =${image} class = "profile-picture rounded-circle h-10">
+          <a href = "${window.location.origin}/profile.html?user=${feed[i].author.name}"><img src =${image} class = "profile-picture rounded-circle h-10" data-user = "${feed[i].author.name}"></a>
         </div>
         <div class = "post-container p-3">
-          <div class = "post-name">
-            <h2>${feed[i].author.name}</h2>
+          <div>
+            <h2 class = "post-name" data-user = "${feed[i].author.name}"><a href = "${window.location.origin}/profile.html?user=${feed[i].author.name}">${feed[i].author.name}</a></h2>
           </div>
           <div class = "post-message">
             <h3 class = "post-title">${feed[i].title}</h3>

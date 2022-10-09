@@ -16,7 +16,6 @@ export default function filter(){
       createFeed(feedOld);
     }else if(filter.value === "pop"){
       createFeed(feedPop);
-      console.log(feedPop)
     }else{
       createFeed(feedNew);
     };

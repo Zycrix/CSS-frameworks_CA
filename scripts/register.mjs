@@ -1,5 +1,5 @@
-import apiCall from "./api.mjs";
-import validate from "./validate.mjs";
+import apiCall from "./modules/api.mjs";
+import validate from "./modules/validate.mjs";
 
 const email = document.querySelector("#email");
 const name = document.querySelector("#username");

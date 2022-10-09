@@ -1,4 +1,4 @@
-import createFeed from "./createFeed.mjs";
+import createFeed from "./modules/createFeed.mjs";
 /**
  * This function filters trough the feed array based on the input in the search field and runs the html creation function with the new result to display the filtered posts.
  * @param {array} feed The feed array fetched from the api 

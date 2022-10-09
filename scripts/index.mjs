@@ -1,8 +1,9 @@
-import getPosts from "./getPosts.mjs";
-import newPost from "./newPost.mjs";
-import search from "./search.mjs";
-import createFeed from "./createFeed.mjs";
-import filter from "./filter.mjs";
+import getPosts from "./modules/getPosts.mjs";
+import newPost from "./modules/newPost.mjs";
+import search from "./modules/search.mjs";
+import createFeed from "./modules/createFeed.mjs";
+import filter from "./modules/filter.mjs";
+import getUser from "./modules/getUser.mjs";
 
 //Get posts to feed
 const feed = await getPosts();
@@ -14,21 +15,9 @@ createFeed(feed);
 
 const searchBar = document.querySelector(".search-field");
 const searchIcon = document.querySelector(".s-icon");
-const profilePicture = document.querySelectorAll(".profile-picture");
-const profileName = document.querySelector(".post-name");
 const logout = document.querySelector(".logout");
 
 //Adding some event listeners
-
-profileName.addEventListener("click", (e)=>{
-  window.location.href = `${window.origin}/profile.html`
-});
-
-profilePicture.forEach((e)=>{
-  e.addEventListener("click", (e)=>{
-    window.location.href = `${window.origin}/profile.html`
-  });
-})
 
 logout.addEventListener("click", (e)=>{
   window.sessionStorage.clear();
@@ -43,3 +32,5 @@ filter();
 
 //New post
 newPost();
+
+getUser();
