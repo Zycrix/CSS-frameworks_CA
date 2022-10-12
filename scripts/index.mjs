@@ -5,6 +5,7 @@ import createFeed from "./modules/createFeed.mjs";
 import filter from "./modules/filter.mjs";
 import getUser from "./modules/getUser.mjs";
 
+
 //Get posts to feed
 const feed = await getPosts();
 
@@ -13,14 +14,10 @@ createFeed(feed);
 
 //Add event listeners
 
-const searchBar = document.querySelector(".search-field");
-const searchIcon = document.querySelector(".s-icon");
 const logout = document.querySelector(".logout");
 
-//Adding some event listeners
-
 logout.addEventListener("click", (e)=>{
-  window.sessionStorage.clear();
+  window.localStorage.clear();
   window.location.reload();
 });
 
@@ -28,9 +25,10 @@ logout.addEventListener("click", (e)=>{
 const newFeed = search(feed);
 
 //Filter function
-filter();
+filter(feed);
 
 //New post
 newPost();
 
-getUser();
+/* getUser(); */
+

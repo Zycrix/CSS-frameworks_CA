@@ -1,4 +1,4 @@
-import apiCall from "./modules/api.mjs";
+import apiCall from "./api.mjs";
 export default async function newPost(){
   const form = document.querySelector(".new-post");
   const content = document.querySelector(".post");
@@ -14,5 +14,7 @@ export default async function newPost(){
     };
 
     const result = await apiCall("post", body, url);
+
+    if(result.title){window.location.reload()};
   });
 }
