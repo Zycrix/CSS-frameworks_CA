@@ -14,5 +14,7 @@ export default async function newPost(){
     };
 
     const result = await apiCall("post", body, url);
+
+    if(result.title){window.location.reload()};
   });
 }

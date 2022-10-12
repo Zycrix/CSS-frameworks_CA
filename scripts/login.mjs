@@ -1,13 +1,10 @@
-import apiCall from "./api.mjs";
+import apiCall from "./modules/api.mjs";
 
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const form = document.querySelector(".login");
 const url = "https://nf-api.onrender.com/api/v1/social/auth/login";
 const error = document.querySelector(".error-div");
-
-sessionStorage.clear()
-localStorage.clear()
 
 async function login(){
   const body = {
@@ -19,8 +16,7 @@ async function login(){
 
   if(result.accessToken){
     error.innerHTML = "";
-    window.sessionStorage.setItem("key", JSON.stringify(result.accessToken));
-    window.sessionStorage.setItem("user", JSON.stringify(result));
+    window.localStorage.setItem("user", JSON.stringify(result));
     window.location.href = `${window.location.origin}/index.html`;
   }else{
     console.log(result);

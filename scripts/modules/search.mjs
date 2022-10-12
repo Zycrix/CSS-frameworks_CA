@@ -9,14 +9,13 @@ export default function search(feed){
 
   let result = [];
 
-  form.addEventListener("submit", (e)=>{ //I'd prefer making it a realtime search but that's going to have to wait until after im done with all the required features
+  searchBar.addEventListener("keyup", (e)=>{ //I'd prefer making it a realtime search but that's going to have to wait until after im done with all the required features
     e.preventDefault();
-
+    console.log("fired");
     result = feed.filter((post)=>post.author.name.toLowerCase().includes(searchBar.value.toLowerCase()));
 
     if(result.length > 0){
-      console.log("fired")
-    createFeed(result);
+      createFeed(result);
     }else{
       createFeed(feed);
     }

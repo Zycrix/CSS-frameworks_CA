@@ -13,12 +13,13 @@ export default async function apiCall(method, body, url){
     },
   };
 
-  if(window.sessionStorage.getItem("key")){
-    const key = JSON.parse(window.sessionStorage.getItem("key"));
+  if(window.localStorage.getItem("user")){
+    const user = JSON.parse(window.localStorage.getItem("user"));
+    const accessToken = user.accessToken;
 
     options.headers = {
       "Content-Type": "application/json",
-      Authorization: `bearer ${key}`
+      Authorization: `bearer ${accessToken}`
     };
   };
 
