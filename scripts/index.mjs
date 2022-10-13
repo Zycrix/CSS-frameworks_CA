@@ -7,14 +7,23 @@ import getUser from "./modules/getUser.mjs";
 
 
 //Get posts to feed
+let current = {
+  index: 0,
+  loaded: 20
+};
+
 const feed = await getPosts();
 
-createFeed(feed);
-
+current = createFeed(feed, current);
 
 //Add event listeners
-
+const loadMore = document.querySelector(".load");
 const logout = document.querySelector(".logout");
+
+loadMore.addEventListener("click", (e)=>{
+  console.log("click")
+  current = createFeed(feed, current);
+});
 
 logout.addEventListener("click", (e)=>{
   window.localStorage.clear();

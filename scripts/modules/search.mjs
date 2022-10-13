@@ -5,19 +5,22 @@ import createFeed from "./createFeed.mjs";
  */
 export default function search(feed){
   const searchBar = document.querySelector(".search-field input");
-  const form = document.querySelector(".search-form");
 
   let result = [];
 
-  searchBar.addEventListener("keyup", (e)=>{ //I'd prefer making it a realtime search but that's going to have to wait until after im done with all the required features
+  searchBar.addEventListener("keyup", (e)=>{ 
     e.preventDefault();
-    console.log("fired");
-    result = feed.filter((post)=>post.author.name.toLowerCase().includes(searchBar.value.toLowerCase()));
+    result = feed.filter((post)=>post.author.name.toLowerCase().includes(searchBar.value.toLowerCase()) || post.title.toLowerCase().includes(searchBar.value.toLowerCase()) || `${post.id}`.includes(searchBar.value));
+
+    const current = {
+      index: 0,
+      loaded: 20
+    }
 
     if(result.length > 0){
-      createFeed(result);
+      createFeed(result, current);
     }else{
-      createFeed(feed);
+      createFeed(feed, current);
     }
   });
 }

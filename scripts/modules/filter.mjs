@@ -15,20 +15,21 @@ export default function filter(feed){
     return b.reactions.length - a.reactions.length;
   });
 
-  console.log(feedNew)
-  console.log(feedOld)
-  console.log(feedPop);
+  const current = {
+    index: 0,
+    loaded: 20
+  }
 
   //Filter the feed
   filter.addEventListener("change", (e)=>{
     if(filter.value === "old"){
       console.log("fired old");
-      createFeed(feedOld);
+      createFeed(feedOld, current);
     }else if(filter.value === "pop"){
-      createFeed(feedPop);
+      createFeed(feedPop, current);
       console.log("fired pop");
     }else{
-      createFeed(feedNew);
+      createFeed(feedNew, current);
       console.log("fired new");
     };
   })
