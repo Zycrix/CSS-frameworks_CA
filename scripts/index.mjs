@@ -4,7 +4,9 @@ import search from "./modules/search.mjs";
 import createFeed from "./modules/createFeed.mjs";
 import filter from "./modules/filter.mjs";
 import getUser from "./modules/getUser.mjs";
+import loggedIn from "./modules/loggedIn.mjs";
 
+loggedIn();
 
 //Get posts to feed
 let current = {
