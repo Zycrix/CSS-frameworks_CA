@@ -12,7 +12,7 @@
     <header class = "bg-dark d-flex flex-column">
       <nav class = "navbar w-100">
         <div class = "p-2 hidden header-profile">
-          <img src = "/media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
+          <img src = "" class = "w-10 h-10 rounded-circle profile-picture user-image">
         </div>
         <div class = "p2 header-login">
           <a href = "login.html" class = "text-light text-decoration-none fs-6">Log in</a>
@@ -34,51 +34,36 @@
     </header>
     <main>
       <div class = "profile-picture-container d-flex justify-content-center mt-3">
-        <img src = "media/pexels-ali-pazani-2613260.jpg" class = "profile-picture-profile rounded-circle">
+        <img src = "" class = "profile-picture-profile rounded-circle profile-image">
       </div>
-      <h1 class = "text-center m-3">Alison</h1>
+      <h1 class = "text-center m-3 profile-name"></h1>
       <div><hr class = "divider m-1"></div>
       <div class = "user-info">
-        <p>From: New York</p>
-        <p>Born: 10. August 1994</p>
-        <p>Job: Photographer for NYC Fotos</p>
+        <p class = "profile-email">Email: </p>
       </div>
       <div><hr class = "divider m-1"></div>
-      <h3>Friends:</h3>
-      <div class = "friend d-flex flex-row justify-content-around p-3">
-        <div class = "friend-container w-auto">
-          <img src = "media/pexels-andrea-piacquadio-774909.jpg" class = "rounded-circle profile-picture">
+      <div class = "container row text-center">
+        <div class = "col followers">
+          <h2>Followers:</h2>
+          <h3 class = "follower-count"></h3>
         </div>
-        <div class = "friend-container w-auto">
-          <img src = "media/pexels-andrew-personal-training-697509.jpg" class = "rounded-circle profile-picture">
-        </div>
-        <div class = "friend-container w-auto">
-          <img src = "media/pexels-italo-melo-2379004.jpg" class = "rounded-circle profile-picture">
-        </div>
-        <div class = "friend-container w-auto">
-          <img src = "media/pexels-pixabay-415829.jpg" class = "rounded-circle profile-picture">
-        </div>
-        <div class = "friend-container w-auto profile-picture-container">
-          <img src = "media/pexels-stefan-stefancik-91227.jpg" class = "rounded-circle profile-picture">
+        <div class = "col following">
+          <h2>Following:</h2>
+          <h3 class="following-count"></h3>
         </div>
       </div>
       <div><hr class = "divider m-1"></div>
-      <div class = "d-flex w-100 justify-content-between">
-        <div class = "profile-picture-container p-3">
-          <img src = "media/fbprofilbilde.jpg" class = "w-10 h-10 rounded-circle profile-picture">
+      <section class = "user-posts">
+        <h2 class="text-center heading"></h2>
+        <div class = "feed-container">
+
         </div>
-        <form class = "p-3 w-100 d-flex flex-column">
-          <textarea placeholder = "Post something on Alison's wall!" class = "post" width = "200px"></textarea>
-          <button class = "btn btn-primary mt-3">POST</button>
-        </form>
-      </div>
-      <div><hr class = "divider m-1"></div>
-     
+      </section>
     </main>
     <footer class = "bg-primary">
       <p class = "text-light text-center fs-4 p-2 logout">Log out</p>
       <h4 class = "m-0 p-3 text-light text-center">©Kristoffer Mikkelsen</h4>
     </footer>
-    <script src = "/scripts/profile.mjs"></script>
+    <script src = "/scripts/profile.mjs" type = module></script>
   </body>
 </html>

@@ -5,9 +5,8 @@
  * @returns {object} A new counter object to be used when the user clicks the load more button
  */
 export default function createFeed(feed, counter){
-  
   let {index, loaded} = counter;
-
+  console.log(feed)
   const defaultImage = "/media/default-profile.jpg";
   const feedContainer = document.querySelector(".feed-container");
 
@@ -16,7 +15,6 @@ export default function createFeed(feed, counter){
   };  
 
   for(index; index < loaded; index++){
-    console.log("fired");
     let image = defaultImage;
     const time = feed[index].created.slice(11,19) + ", " + feed[index].created.slice(0,10);
 

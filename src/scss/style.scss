@@ -3,13 +3,16 @@
 
 .profile-picture{
   height:7vh; // I could not get the size working using bootstrap, tried with both vh-x, h-x, and mh-x but none of them actually resized the picture or the container
-
+  
   aspect-ratio: 1/1;
   object-fit: cover; 
   cursor: pointer;
 }
 .post-name{
   cursor: pointer;
+}
+.profile-picture-header{
+  height: 5vh;
 }
 .hidden{
   display: none;

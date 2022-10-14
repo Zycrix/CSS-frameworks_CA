@@ -23,7 +23,6 @@ const loadMore = document.querySelector(".load");
 const logout = document.querySelector(".logout");
 
 loadMore.addEventListener("click", (e)=>{
-  console.log("click")
   current = createFeed(feed, current);
 });
 
