@@ -12,8 +12,15 @@
   <header class = "bg-dark w-100 m-auto text-center">
     <nav class = "navbar w-30 m-auto container">
       <div class = "row w-100 align-items-center">
-        <div class = "p-2 hidden header-profile col w-auto justify-self-center">
+        <div class = "p-2 hidden header-profile col w-auto justify-self-center dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src = "" class = "w-10 h-10 rounded-circle profile-picture-header user-image">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="/post.html?id=user">My posts</a></li>
+            <li><a class = "dropdown-item log-out" href = "#">Log out</a></li>
+          </ul>
         </div>
         <div class = "p2 header-login col">
           <a href = "login.html" class = "text-light text-decoration-none fs-6">Log in</a>
@@ -35,7 +42,7 @@
     <h1 class = "text-center p-3">Socials Feed</h1>
     <div class = "d-flex w-100 justify-content-between">
       <div class = "profile-picture-container p-3">
-        <img src = "" class = "w-10 h-10 rounded-circle profile-picture h-10 user-image">
+        <a href = "profile.html"><img src = "" class = "w-10 h-10 rounded-circle profile-picture h-10 user-image"></a>
       </div>
       <form class = "p-3 w-100 d-flex flex-column new-post">
         <input type = "text" class = "mb-1 border-light border-rounded post-title">

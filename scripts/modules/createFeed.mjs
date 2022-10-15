@@ -18,7 +18,10 @@ export default function createFeed(feed, counter){
     let image = defaultImage;
     const time = feed[index].created.slice(11,19) + ", " + feed[index].created.slice(0,10);
 
-    if(feed[index].author.avatar.length > 1){image = feed[index].author.avatar};
+    if(feed[index].author.avatar.length > 1){
+      image = feed[index].author.avatar
+    };
+
     
     feedContainer.innerHTML += `
     <div class = "post-friend my-5" data-id = "${feed[index].id}">
@@ -30,7 +33,7 @@ export default function createFeed(feed, counter){
           <div>
             <h2 class = "post-name" data-user = "${feed[index].author.name}"><a href = "${window.location.origin}/profile.html?user=${feed[index].author.name}">${feed[index].author.name}</a></h2>
           </div>
-          <div class = "post-message">
+          <a href = ${window.location.origin}/post.html?id=${feed[index].id}><div class = "post-message">
             <h3 class = "post-title">${feed[index].title}</h3>
             <p>${feed[index].body}</p>
           </div>
@@ -44,7 +47,18 @@ export default function createFeed(feed, counter){
     `
   }
 
-  if(loaded === feed.length){
+  //Add post event listeners
+  const post = document.querySelectorAll(".post-message");
+  post.forEach((e)=>{
+    e.addEventListener("click", (e)=>{
+      console.log(e);
+
+      console.log(e.target.attributes);
+      console.log(das)
+    })
+  })
+
+  if(loaded === feed.length && window.location.pathname !== "/profile.html" && window.location.pathname !== "/post.html"){
     const buttonContainer = document.querySelector(".button-container");
     const button = document.querySelector(".load");
 

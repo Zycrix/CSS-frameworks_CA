@@ -2,6 +2,7 @@ export default function loggedIn(){
   const logIn = document.querySelector(".header-login");
   const container = document.querySelector(".header-profile");
   const userImage = document.querySelectorAll(".user-image");
+  const logOut = document.querySelector(".log-out");
 
   if(window.localStorage.getItem("user")){
     logIn.classList.add("hidden");
@@ -19,7 +20,12 @@ export default function loggedIn(){
     };
 
     userImage.forEach((e)=>{
-      e.src = image
+      e.src = image;
     })
   }
+
+  logOut.addEventListener("click", (e)=>{
+    window.localStorage.clear();
+    window.location.reload();
+  })
 }

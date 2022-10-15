@@ -25,11 +25,15 @@ export default function buildProfile(user){
 
   const counter = {
     index: 0,
-    loaded: 100
+    loaded: posts.length
   };
 
   posts.forEach((e)=>{
-    e.avatar = picture;
+    e.author = {
+      name: name,
+      email: email,
+      avatar: avatar
+    };
   });
 
   createFeed(posts, counter)

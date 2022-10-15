@@ -10758,6 +10758,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+a {
+  text-decoration: none;
+}
+
 .profile-picture {
   height: 7vh;
   aspect-ratio: 1/1;
