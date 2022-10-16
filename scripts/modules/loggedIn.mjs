@@ -1,3 +1,6 @@
+/**
+ * This function checks if the user is logged in or not and displays the avatar on the nav bar and handles clearing the storage on logout
+ */
 export default function loggedIn(){
   const logIn = document.querySelector(".header-login");
   const container = document.querySelector(".header-profile");

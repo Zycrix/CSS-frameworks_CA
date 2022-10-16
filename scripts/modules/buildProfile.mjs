@@ -1,4 +1,8 @@
 import createFeed from "./createFeed.mjs";
+/**
+ * This function build the profile based on a object
+ * @param {object} user The object to build the profile from
+ */
 export default function buildProfile(user){
   const {name, posts, avatar, email, followers, following} = user;
   let picture;

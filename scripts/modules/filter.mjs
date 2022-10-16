@@ -1,4 +1,8 @@
 import createFeed from "./createFeed.mjs";
+/**
+ * Creates 3 different feed arrays to filter based on and sets event listeners for the select element
+ * @param {array} feed The original feed array fetched from the api
+ */
 export default function filter(feed){
   const filter = document.querySelector("select");
   

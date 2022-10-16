@@ -1,4 +1,7 @@
 import apiCall from "./api.mjs";
+/**
+ * Function to post a new post to the api
+ */
 export default async function newPost(){
   const form = document.querySelector(".new-post");
   const content = document.querySelector(".post");
