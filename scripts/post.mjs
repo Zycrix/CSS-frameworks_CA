@@ -25,7 +25,6 @@ if(result !== "user"){
   };
 
   tabTitle.innerHTML = `Socials | ${post[0].title}`;
-  console.log(post)
   createFeed(post, counter);
 }else{
   const user = JSON.parse(window.localStorage.getItem("user"));

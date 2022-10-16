@@ -23,14 +23,11 @@ export default function filter(feed){
   //Filter the feed
   filter.addEventListener("change", (e)=>{
     if(filter.value === "old"){
-      console.log("fired old");
       createFeed(feedOld, current);
     }else if(filter.value === "pop"){
       createFeed(feedPop, current);
-      console.log("fired pop");
     }else{
       createFeed(feedNew, current);
-      console.log("fired new");
     };
   })
 }

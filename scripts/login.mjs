@@ -19,7 +19,6 @@ async function login(){
     window.localStorage.setItem("user", JSON.stringify(result));
     window.location.href = `${window.location.origin}/index.html`;
   }else{
-    console.log(result);
     error.innerHTML = `<p class ='text-danger fs-4'>${result.message}<p>`;
   }
 }

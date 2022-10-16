@@ -94,7 +94,6 @@ export default function createFeed(feed, counter){
 
       update.forEach((e)=>{
         e.addEventListener("click", async (e)=>{
-          console.log("click");
           const id = e.target.dataset.id;
           const updatedTitle = document.querySelector("#post-title").value;
           const updatedMessage = document.querySelector("#post-message").value;
@@ -134,17 +133,6 @@ export default function createFeed(feed, counter){
     `
     }
   }
-
-  //Add post event listeners
-  const post = document.querySelectorAll(".post-message");
-  post.forEach((e)=>{
-    e.addEventListener("click", (e)=>{
-      console.log(e);
-
-      console.log(e.target.attributes);
-      console.log(das)
-    })
-  })
 
   if(loaded === feed.length && window.location.pathname !== "/profile.html" && window.location.pathname !== "/post.html"){
     const buttonContainer = document.querySelector(".button-container");
