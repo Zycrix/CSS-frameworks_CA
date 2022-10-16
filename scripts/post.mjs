@@ -1,7 +1,6 @@
 import loggedIn from "./modules/loggedIn.mjs";
 import getPosts from "./modules/getPosts.mjs";
 import createFeed from "./modules/createFeed.mjs";
-import createUserFeed from "./modules/userPosts.mjs";
 import deletePost from "./modules/deletePost.mjs";
 
 //Check if the user is logged in
@@ -13,7 +12,7 @@ const search = new URLSearchParams(queryString);
 let result = search.get("id");
 
 //Get feed to find correct post
-
+const tabTitle = document.querySelector("title");
 
 const feed = await getPosts()
 
@@ -25,21 +24,19 @@ if(result !== "user"){
     loaded: 1
   };
 
+  tabTitle.innerHTML = `Socials | ${post[0].title}`;
+  console.log(post)
   createFeed(post, counter);
 }else{
   const user = JSON.parse(window.localStorage.getItem("user"));
   const posts = feed.filter((e)=> e.author.name === user.name);
 
-  createUserFeed(posts);
+  const counter = {
+    index: 0,
+    loaded: 100
+  };
+  
+  tabTitle.innerHTML = "You're posts";
 
-  const remove = document.querySelectorAll(".delete");
-  const update = document.querySelectorAll(".update");
-
-  remove.forEach((e)=>{
-    e.addEventListener("click", (e)=>{
-      const id = e.target.dataset.id;
-      deletePost(id);
-      window.location.reload();
-    })
-  })
+  createFeed(posts, counter);
 }

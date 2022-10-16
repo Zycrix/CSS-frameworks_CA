@@ -10831,10 +10831,6 @@ main {
     max-width: 90%;
     margin: 0 auto;
   }
-  .search-field {
-    max-width: 90%;
-    margin: 0 auto;
-  }
   nav {
     max-width: 90%;
     margin: 0 auto;
@@ -10844,18 +10840,12 @@ main {
   main {
     max-width: 75%;
   }
-  .search-field {
-    max-width: 75%;
-  }
   nav {
     max-width: 75%;
   }
 }
 @media (min-width: 1200px) {
   main {
-    max-width: 50%;
-  }
-  .search-field {
     max-width: 50%;
   }
   nav {

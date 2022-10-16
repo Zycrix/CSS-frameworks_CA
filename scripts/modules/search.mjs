@@ -5,8 +5,13 @@ import createFeed from "./createFeed.mjs";
  */
 export default function search(feed){
   const searchBar = document.querySelector(".search-field input");
+  const form = document.querySelector(".search-form");
 
   let result = [];
+
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+  });
 
   searchBar.addEventListener("keyup", (e)=>{ 
     e.preventDefault();

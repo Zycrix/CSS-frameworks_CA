@@ -1,6 +1,6 @@
 import createFeed from "./createFeed.mjs";
 export default function buildProfile(user){
-  const {name, posts, avatar, email} = user;
+  const {name, posts, avatar, email, followers, following} = user;
   let picture;
 
   if(!avatar){
@@ -12,15 +12,15 @@ export default function buildProfile(user){
   const profilePicture = document.querySelector(".profile-image");
   const profileName = document.querySelector(".profile-name");
   const profileEmail = document.querySelector(".profile-email");
-  const followers = document.querySelector(".follower-count");
-  const following = document.querySelector(".following-count");
+  const followersContainer = document.querySelector(".follower-count");
+  const followingContainer = document.querySelector(".following-count");
   const heading = document.querySelector(".heading");
 
   profilePicture.src = picture;
   profileName.innerHTML = name;
   profileEmail.innerHTML += email;
-  followers.innerHTML = user.followers.length;
-  following.innerHTML = user.following.length;
+  followersContainer.innerHTML = followers.length;
+  followingContainer.innerHTML = following.length;
   heading.innerHTML = `View ${name}'s posts`;
 
   const counter = {
@@ -36,5 +36,5 @@ export default function buildProfile(user){
     };
   });
 
-  createFeed(posts, counter)
+  createFeed(posts.reverse(), counter)
 }

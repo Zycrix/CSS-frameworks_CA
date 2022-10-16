@@ -10,7 +10,7 @@ export default function filter(feed){
   //Create the sorted arrays
   const feedNew = JSON.parse(window.sessionStorage.getItem("copy"));
   const feedOld = JSON.parse(window.sessionStorage.getItem("copy")).reverse();
-  console.log("filter");
+
   const feedPop = JSON.parse(window.sessionStorage.getItem("copy")).sort((a, b)=>{
     return b.reactions.length - a.reactions.length;
   });
