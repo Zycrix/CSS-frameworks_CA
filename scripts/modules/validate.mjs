@@ -13,12 +13,13 @@ export default function validate(data, confirm){
   const regex = /[a-w.]+@(stud.)?noroff.no/g;
   const result = regex.test(email);
 
-  if(!result){
+/*   if(!result){
     emailError.classList.add("email-error");
+    console.log(result)
     return false;
   }else{
     emailError.classList.remove("email-error");
-  };
+  }; */
 
   //Make sure the passwords match
   const passError = document.querySelector(".password");
