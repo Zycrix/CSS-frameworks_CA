@@ -12,13 +12,13 @@ export default async function newPost(){
     e.preventDefault();
 
     const body = {
-      title: /*title.value*/"test",
-      body: /*content.value*/"test"
+      title: title.value,
+      body: content.value
     };
 
-    console.log(body)
-    /* const result = await apiCall("post", body, url); */
 
-    /* if(result.title){window.location.reload()}; */
+    const result = await apiCall("post", body, url);
+
+    if(result.title){window.location.reload()};
   });
 }
