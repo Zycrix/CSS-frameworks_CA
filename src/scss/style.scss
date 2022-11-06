@@ -1,15 +1,21 @@
 @import "variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+a{
+  text-decoration: none;
+}
 .profile-picture{
   height:7vh; // I could not get the size working using bootstrap, tried with both vh-x, h-x, and mh-x but none of them actually resized the picture or the container
-
+  
   aspect-ratio: 1/1;
   object-fit: cover; 
   cursor: pointer;
 }
 .post-name{
   cursor: pointer;
+}
+.profile-picture-header{
+  height: 5vh;
 }
 .hidden{
   display: none;
@@ -34,15 +40,25 @@ main{
 .logout{
   cursor: pointer;
 }
-
-/*I know bootstrap includes its own media queries but after reading the documentation i really can't see any benefit to using they're media query functions over the standard css ones, except for the fact that the breakpoint widths are already chosen to a default value. because of this i chose to keep this section like this for now. For the next project or if we're going to be working more on this site i will probably include it just to have done it but for now i can't see the value in it.*/
+.confirm-error label, .password-error label, .email-error label{
+  display: flex;
+  justify-content: space-between;
+}
+.confirm-error label::after{
+  content:"Passwords must match";
+  color: red;
+}
+.password-error label::after{
+  content:"Minimum 8 characters";
+  color: red;
+}
+.email-error label::after{
+  content:"Must be a valid Noroff email adress";
+  color: red;
+}
 
 @media(min-width: 700px){  
   main{
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .search-field{
     max-width: 90%;
     margin: 0 auto;
   }
@@ -55,9 +71,6 @@ main{
   main{
     max-width:75%;
   }
-  .search-field{
-    max-width: 75%;
-  }
   nav{
     max-width: 75%;
   }
@@ -66,10 +79,7 @@ main{
   main{
     max-width: 50%;
   }
-  .search-field{
-    max-width: 50%;
-  }
   nav{
-    max-width: 50%;
+    max-width: 50% !important;
   }
 }
