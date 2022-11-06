@@ -12,11 +12,12 @@ export default function loggedIn(){
     container.classList.remove("hidden");
 
     const user = JSON.parse(window.localStorage.getItem("user"));
+
     const avatar = user.avatar;
     const defaultAvatar = "/media/default-profile.jpg";
     let image = "";
 
-    if(avatar.length < 2){
+    if(avatar === null){
       image = defaultAvatar;
     }else{
       image = avatar;

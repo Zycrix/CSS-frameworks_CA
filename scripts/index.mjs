@@ -22,10 +22,11 @@ current = createFeed(feed, current);
 const loadMore = document.querySelector(".load");
 const logout = document.querySelector(".logout");
 
-loadMore.addEventListener("click", (e)=>{
+if(loadMore){
+  loadMore.addEventListener("click", (e)=>{
   current = createFeed(feed, current);
 });
-
+}
 logout.addEventListener("click", (e)=>{
   window.localStorage.clear();
   window.location.reload();
@@ -40,5 +41,5 @@ filter(feed);
 //New post
 newPost();
 
-/* getUser(); */
+
 

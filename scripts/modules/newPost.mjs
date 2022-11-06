@@ -16,6 +16,7 @@ export default async function newPost(){
       body: content.value
     };
 
+
     const result = await apiCall("post", body, url);
 
     if(result.title){window.location.reload()};

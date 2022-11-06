@@ -15,14 +15,15 @@ export default function createFeed(feed, counter){
 
   if(index === 0){
     feedContainer.innerHTML = ""
-  };  
+  };
+  if(loaded > feed.length){loaded = feed.length}  
 
   for(index; index < loaded; index++){
     let image = defaultImage;
     const time = feed[index].created.slice(11,19) + ", " + feed[index].created.slice(0,10);
 
-    if(feed[index].author.avatar.length > 1){
-      image = feed[index].author.avatar
+    if(feed[index].author.avatar !== null){
+      image = feed[index].author.avatar;
     };
 
     if(feed[index].author.name === user.name && window.location.pathname !== "/index.html"){ //Couldn't get the delete event listener to work on the main feed for some reason so im excluding the post options from the main feed so you have to go to you're profile or you're posts to delete/edit posts
