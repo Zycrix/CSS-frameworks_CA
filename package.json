@@ -4,11 +4,12 @@
   "description": "Course assignment for css frameworks",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test-unit",
-    "test-unit": "jest",
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server",
-    "test-e2e": "cypress open"
+    "test": "npm run test-unit && npm run test-e2e-cli",
+    "test-unit": "jest",
+    "test-e2e": "cypress open",
+    "test-e2e-cli": "cypress run"
   },
   "repository": {
     "type": "git",
