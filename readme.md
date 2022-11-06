@@ -14,15 +14,15 @@ npm run build
 npm run watch
 ```
 
-### Test badges:
+### Test status:
 
 E2E test:
 
-[![Automated E2E Testing](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/e2e-test.yml)
+[![Automated E2E Testing](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/e2e-test.yml/badge.svg?branch=automated-testing)](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/e2e-test.yml)
 
 Unit test:
 
-[![Automated Unit Testing](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/unit-test.yml/badge.svg)](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/unit-test.yml)
+[![Automated Unit Testing](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/unit-test.yml/badge.svg?branch=automated-testing)](https://github.com/Zycrix/CSS-frameworks_CA/actions/workflows/unit-test.yml)
 
 #### Please note:
 
